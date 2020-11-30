@@ -54,7 +54,7 @@ export default function CreateNew  ()  {
             lollyPath: id,
         }})
         console.log("result from server", results)
-        navigate(`/lollies/${id}`)
+        await navigate(`/lollies/${id}`)
     }
     return (
     <div className="container">
