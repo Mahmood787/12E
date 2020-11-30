@@ -1,0 +1,112 @@
+
+body{
+    text-align: center;
+    background: rgb(196 234 201);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+.lolliList{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.lolliList .lollipop, .lollyFormDiv .lollipop{
+    height: 300px;
+}
+.lollyFormDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.lollyFlavourDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.colorPickerLabel {
+    background: chartreuse;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin:20px;
+    border-radius: 50%;
+}
+.colorPicker {
+    background: chocolate;
+    width: 80px;
+    height: 80px;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+.lollyForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 101, 101);
+    padding:30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    width: 100%;
+    margin:30px
+}
+.lollyForm *{
+    margin:2px;
+    border-radius: 10px;
+    width: 90%;
+}
+.lollyForm input {
+    border: 2px solid black;
+    height: 30px;
+}
+.lollyForm label{
+    margin: 10px 4px;
+}
+/* lolly link page */
+.lolly{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.lollyText{
+    background: rgb(255, 101, 101);
+    width: 60%;
+    margin: 4%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    border-radius: 20px;
+}
+.lollyText p{
+    background: rgb(100, 52, 46);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+
+}
+.lollyText h4{
+    text-align: left;
+    margin-left: 40px;
+    background: rgb(100, 52, 46);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.lollyText .left{
+    width: 150px;
+    display: inline-block;
+}
+.buttonFormSbu{
+    width: 70%;
+    margin-top: 20px;
+    background:black;
+    color:white;
+    font-weight: bold;
+}
