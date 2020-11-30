@@ -1,4 +1,4 @@
-const axios =require("axios")
+ axios =require("axios")
 const { ApolloServer, gql } = require('apollo-server-lambda')
 const faunadb = require('faunadb')
 const q = faunadb.query
@@ -72,6 +72,12 @@ const resolvers = {
       )
       axios
         .post("https://api.netlify.com/build_hooks/5fc54a1a0d7a9d2ac1c1ba3f")
+        .then(function (response) {
+          console.log(response)
+        })
+        .catch(function (error) {
+          console.error(error)
+        })
       return results.data
   }
 }}
