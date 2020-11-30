@@ -9,7 +9,6 @@ exports.createPages =async ({actions, graphql})=>{
                 }
             }
          }
-
     `)
     console.log("from nodejs", data)
     data.Lollies.getAllLollies.forEach(({lollyPath})=>{

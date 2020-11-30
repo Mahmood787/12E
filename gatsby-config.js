@@ -12,7 +12,7 @@ module.exports = {
       options: {
         typeName: `Lolly`,
         fieldName: `Lollies`,//under this name gql queries will be available
-        url: `http://sad-noether-3211be.netlify.app`,
+        url: `http://sad-noether-3211be.netlify.app/.netlify/functions/vLolly`,
       },
     },
   ],
