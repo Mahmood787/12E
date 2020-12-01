@@ -17,11 +17,11 @@ export default function Home() {
           <Lollypop fillLollyBottom="blue" fillLollyTop="green" fillLollyMiddle="black"/>
         </div>
       </div>
-      <input type="button" value="Create New Lolly"
+      <button value="Create New Lolly"
         onClick={()=>{
-          navigate('/CreateNew')
+          navigate('/createNew')
         }}
-      ></input>
+      >Create Lollies</button>
     </div>
   )
 }

@@ -31,8 +31,8 @@ const CREATE_LOLLY_MUTATION=gql`
     }
 `;
 export default function CreateNew  ()  {
-    const {loading, error, data} =useQuery(GET_DATA)
-    const [createLolly]= useMutation(CREATE_LOLLY_MUTATION)
+    const [loadings, setLoading]=useState(false)
+    const [createLolly,{data}]= useMutation(CREATE_LOLLY_MUTATION)
     const [color1,setColor1]=useState("#d52358")
     const [color2,setColor2]=useState("#e95946")
     const [color3,setColor3]=useState("#deaa43")
@@ -54,12 +54,14 @@ export default function CreateNew  ()  {
             lollyPath: id,
         }})
         console.log("result from server", results)
-        await navigate(`/lollies/${id}`)
+        setLoading(true)
     }
+    
     return (
     <div className="container">
-        {data && data.hello && <div>{data.hello}</div>}
+        
         <Header/>
+        {!loadings ? (
         <div className="lollyFormDiv">
             <div>
                 <Lollypop fillLollyBottom={color3} fillLollyTop={color1} fillLollyMiddle={color2}/>
@@ -99,7 +101,12 @@ export default function CreateNew  ()  {
                 </div>
             </div>
             
-        </div>
+        </div>): (
+            <div>
+                <h1 style={{fontFamily:"Yellowtail", color:"white", margin:"auto",textAlign:"center"}}>Your Loolly is being freezed Please wait for 3 minutes then Click this link</h1>
+                <a className="linkP">https://sad-noether-3211be.netlify.app/lollies/{data.createLolly.lollyPath}</a>
+            </div>
+        )}
     </div>
     )
 }
