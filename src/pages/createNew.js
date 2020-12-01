@@ -56,7 +56,15 @@ export default function CreateNew  ()  {
         console.log("result from server", results)
         setLoading(true)
     }
-    
+    useEffect(() => {
+        async function runHook() {
+             await fetch("https://api.netlify.com/build_hooks/5fc54a1a0d7a9d2ac1c1ba3f", {
+                method: "POST",
+            });
+        }
+        runHook();
+
+    }, [data])
     return (
     <div className="container">
         
