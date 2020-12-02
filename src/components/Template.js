@@ -43,7 +43,8 @@ const Template = ({pathContext:{lollyPath}}) => {
                         <p>http://localhost:8888/lollies{data.getLollyByPath.lollyPath}</p>
                         <div>
                             <h4><span className="left">To: </span><span>{data.getLollyByPath.recipientName}</span></h4>
-                            <h4><span className="left">Message: </span>{data.getLollyByPath.message}"</h4>
+
+                            <h4><span className="left">Message: </span><br/><span className="message">{data.getLollyByPath.message}</span></h4>
                             <h4><span className="left">From: </span>   {data.getLollyByPath.senderName}</h4>
                         </div>
                     </div>

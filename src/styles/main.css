@@ -82,16 +82,25 @@ body {
 
 .lollyText{
     background: rgb(255, 101, 101);
-    width: 60%;
+    width: 40%;
     margin: 4%;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     border-radius: 20px;
 }
+.message{
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.lollyText h2{
+    text-align: center;
+}
 .lollyText p{
     background: rgb(100, 52, 46);
     padding: 20px;
     margin: 20px;
+    text-align: center;
     border-radius: 10px;
 
 }
