@@ -67,7 +67,6 @@ export default function CreateNew  ()  {
     }, [data])
     return (
     <div className="container">
-        
         <Header/>
         {!loadings ? (
         <div className="lollyFormDiv">
@@ -110,8 +109,8 @@ export default function CreateNew  ()  {
             </div>
             
         </div>): (
-            <div>
-                <h1 style={{fontFamily:"Yellowtail", color:"white", margin:"auto",textAlign:"center"}}>Your Loolly is being freezed Please wait for 3 minutes then Click this link</h1>
+            <div className="lollyFormDiv" style={{flexDirection:"column"}}>
+                <h1 style={{fontFamily:"cursive", color:"white", margin:"auto",textAlign:"center"}}>Your Loolly is being freezed Please wait for 3 minutes then Click this link</h1>
                 <a className="linkP">https://sad-noether-3211be.netlify.app/lollies/{data.createLolly.lollyPath}</a>
             </div>
         )}
