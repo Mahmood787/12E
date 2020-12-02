@@ -1,7 +1,7 @@
 import { gql, useMutation, useQuery } from '@apollo/client'
 import { navigate } from 'gatsby';
 import shortid from "shortid"
-import React, { useEffect, useRef, useState } from 'react'
+import React, { TextareaHTMLAttributes, useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
 import Lollypop from '../components/lollypop'
 
@@ -36,9 +36,9 @@ export default function CreateNew  ()  {
     const [color1,setColor1]=useState("#d52358")
     const [color2,setColor2]=useState("#e95946")
     const [color3,setColor3]=useState("#deaa43")
-    const recipentRef =useRef()
-    const messageRef =useRef()
-    const senderRef =useRef()
+    const recipentRef =useRef <HTMLInputElement>()
+    const messageRef =useRef <HTMLTextAreaElement>()
+    const senderRef =useRef <HTMLInputElement>()
     const submitLollyForm =async()=>{
         console.log("clicked")
         console.log("messageref", messageRef.current.value)
@@ -99,7 +99,7 @@ export default function CreateNew  ()  {
                     <label htmlFor="recipentMessage">
                         Message
                     </label>
-                        <textarea rows="15" columns="30" ref={messageRef}/>
+                        <textarea rows={15}  ref={messageRef}/> 
                     <label htmlFor="senderName">
                         From
                     </label>

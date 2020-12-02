@@ -40,7 +40,7 @@ const Template = ({pathContext:{lollyPath}}) => {
                     
                     <div className="lollyText">
                         <h2>Share Lolly with this link</h2>
-                        <p>http://localhost:8888/lollies{data.getLollyByPath.lollyPath}</p>
+                        <p>https://sad-noether-3211be.netlify.app/lollies{data.getLollyByPath.lollyPath}</p>
                         <div>
                             <h4><span className="left">To: </span><span>{data.getLollyByPath.recipientName}</span></h4>
 
