@@ -31,17 +31,26 @@ const CREATE_LOLLY_MUTATION=gql`
     }
 `;
 export default function CreateNew  ()  {
+   interface FlavoursType {
+    recipientName?: string
+    message?: string
+     senderName?: string
+     flavourTop?: string
+      flavourMiddle?: string
+       flavourBottom?: string
+       lollyPath?: string
+      }    
     const [loadings, setLoading]=useState(false)
     const [createLolly,{data}]= useMutation(CREATE_LOLLY_MUTATION)
     const [color1,setColor1]=useState("#d52358")
     const [color2,setColor2]=useState("#e95946")
     const [color3,setColor3]=useState("#deaa43")
-    const recipentRef =useRef <HTMLInputElement| null>(null)
-    const messageRef =useRef <HTMLTextAreaElement| null>(null)
-    const senderRef =useRef <HTMLInputElement| null>(null)
+    const recipentRef =useRef <HTMLInputElement | null>(null)
+    const messageRef =useRef <HTMLTextAreaElement | null>(null)
+    const senderRef =useRef <HTMLInputElement | null>(null)
     const submitLollyForm =async()=>{
         const id = shortid.generate()
-       const results= await createLolly({variables:{
+       const results= await createLolly({variables :{
             recipientName: recipentRef.current.value,
             message:messageRef.current.value,
             senderName:senderRef.current.value, 
@@ -60,7 +69,6 @@ export default function CreateNew  ()  {
             });
         }
         runHook();
-
     }, [data])
     return (
     <div className="container">
