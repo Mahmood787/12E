@@ -5,7 +5,7 @@ import React, {  useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
 import Lollypop from '../components/lollypop'
 
-const GET_DATA= gql`
+const GET_DAT= gql`
     {
       getAllLollies
     } 
