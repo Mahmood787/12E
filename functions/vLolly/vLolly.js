@@ -69,12 +69,7 @@ const resolvers = {
       const results = await client.query(
         q.Create(q.Collection("Lolly"),{data:args})
       )
-        .then(function (response) {
-          console.log(response)
-        })
-        .catch(function (error) {
-          console.error(error)
-        })
+        console.log(results)
       return results.data
     }catch (e) {
       return e.toString()
