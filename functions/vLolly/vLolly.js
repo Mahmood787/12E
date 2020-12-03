@@ -3,7 +3,6 @@ const { ApolloServer, gql } = require('apollo-server-lambda')
 const faunadb = require('faunadb')
 const q = faunadb.query
 const client = new faunadb.Client({secret:"fnAD7pdtbRACAaxjT4Om2JdGbwKQch3pWiG9N2P9"})
-const shortid = require('shortid')
 const typeDefs = gql`
   type Query {
     getAllLollies: [Lolly!]
