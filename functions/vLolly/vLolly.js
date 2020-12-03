@@ -1,4 +1,4 @@
-const axios =require("axios")
+
 const { ApolloServer, gql } = require('apollo-server-lambda')
 const faunadb = require('faunadb')
 const q = faunadb.query
@@ -65,12 +65,10 @@ const resolvers = {
   Mutation: {
     createLolly: async(_,args)=>{
       
-    
+    try{
       const results = await client.query(
         q.Create(q.Collection("Lolly"),{data:args})
       )
-      axios
-        .post("https://api.netlify.com/build_hooks/5fc54a1a0d7a9d2ac1c1ba3f")
         .then(function (response) {
           console.log(response)
         })
@@ -78,6 +76,9 @@ const resolvers = {
           console.error(error)
         })
       return results.data
+    }catch (e) {
+      return e.toString()
+    }
   }
 }}
 

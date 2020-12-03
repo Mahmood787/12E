@@ -1,7 +1,7 @@
 import { gql, useMutation, useQuery } from '@apollo/client'
 import { navigate } from 'gatsby';
 import shortid from "shortid"
-import React, { TextareaHTMLAttributes, useEffect, useRef, useState } from 'react'
+import React, {  useEffect, useRef, useState } from 'react'
 import Header from '../components/Header'
 import Lollypop from '../components/lollypop'
 
