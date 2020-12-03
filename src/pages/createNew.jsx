@@ -7,7 +7,7 @@ import Lollypop from '../components/lollypop'
 
 const GET_DATA= gql`
     {
-        getAllLollies
+      getAllLollies
     } 
 `;
 const CREATE_LOLLY_MUTATION=gql`
@@ -36,9 +36,9 @@ export default function CreateNew  ()  {
     const [color1,setColor1]=useState("#d52358")
     const [color2,setColor2]=useState("#e95946")
     const [color3,setColor3]=useState("#deaa43")
-    const recipentRef =useRef <HTMLInputElement>()
-    const messageRef =useRef <HTMLTextAreaElement>()
-    const senderRef =useRef <HTMLInputElement>()
+    const recipentRef =useRef ()
+    const messageRef =useRef ()
+    const senderRef =useRef ()
     const submitLollyForm =async()=>{
         console.log("clicked")
         console.log("messageref", messageRef.current.value)
