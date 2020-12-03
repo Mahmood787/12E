@@ -31,15 +31,7 @@ const CREATE_LOLLY_MUTATION=gql`
     }
 `;
 export default function CreateNew  ()  {
-   interface FlavoursType {
-    recipientName?: string
-    message?: string
-     senderName?: string
-     flavourTop?: string
-      flavourMiddle?: string
-       flavourBottom?: string
-       lollyPath?: string
-      }    
+   
     const [loadings, setLoading]=useState(false)
     const [createLolly,{data}]= useMutation(CREATE_LOLLY_MUTATION)
     const [color1,setColor1]=useState("#d52358")
