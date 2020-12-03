@@ -36,13 +36,10 @@ export default function CreateNew  ()  {
     const [color1,setColor1]=useState("#d52358")
     const [color2,setColor2]=useState("#e95946")
     const [color3,setColor3]=useState("#deaa43")
-    const recipentRef =useRef ()
-    const messageRef =useRef ()
-    const senderRef =useRef ()
+    const recipentRef =useRef <HTMLInputElement> ()
+    const messageRef =useRef <HTMLTextAreaElement>()
+    const senderRef =useRef <HTMLInputElement>()
     const submitLollyForm =async()=>{
-        console.log("clicked")
-        console.log("messageref", messageRef.current.value)
-        console.log("color", color1)
         const id = shortid.generate()
        const results= await createLolly({variables:{
             recipientName: recipentRef.current.value,

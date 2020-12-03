@@ -1,7 +1,6 @@
 import React from "react"
 import gql from "graphql-tag"
 import Header from "./Header"
-import { Link } from "gatsby"
 import { useQuery } from "@apollo/client"
 import Lollypop from "./lollypop"
 
