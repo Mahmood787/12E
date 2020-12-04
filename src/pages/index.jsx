@@ -6,6 +6,7 @@ export default function Home() {
   return (
     <div className="container">
       <Header/>
+      k
       <div className="lolliList">
         <div>
           <Lollypop fillLollyBottom="blue" fillLollyTop="green" fillLollyMiddle="black"/>
